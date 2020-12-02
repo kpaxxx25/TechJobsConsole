@@ -118,7 +118,20 @@ namespace TechJobsConsole
 
         private static void PrintJobs(List<Dictionary<string, string>> someJobs)
         {
-            Console.WriteLine("PrintJobs is not implemented yet");
+
+            foreach (Dictionary<string, string> somejob in someJobs) {
+                foreach (KeyValuePair<string, string> jobProperty in somejob)
+                {
+                    Console.WriteLine($"{jobProperty.Key}: {jobProperty.Value}");
+                    // do something with entry.Value or entry.Key
+                }
+
+
+               Console.WriteLine("******");
+            }
         }
     }
 }
+
+
+//myDictionary["B2"].Make; (16:30 collections)
